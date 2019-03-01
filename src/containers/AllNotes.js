@@ -1,18 +1,25 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import Notes from '../components/Notes';
-import { connect } from 'redux';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { getNotes } from '../selectors/notes';
 
-class AllNotes extends PureComponent {
-  render() {
-    return (
-      <ul>
-        <Notes />
-      </ul>
-    );
-  }
+function AllNotes({ notes }) {
+  return (
+    <>
+      <Notes notes={notes} />
+    </>
+  );
 }
 
+const mapStateToProps = state => ({
+  notes: getNotes(state)
+});
+
+AllNotes.propTypes = {
+  notes: PropTypes.object.isRequired
+};
+
 export default connect(
-  mapStateToProps,
-  mapDispatchToProps
+  mapStateToProps
 )(AllNotes);
