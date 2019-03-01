@@ -2,11 +2,7 @@ import shortid from 'shortid';
 import { ADD_NOTE } from '../actions/notes';
 
 const initialState = {
-  notes: {
-    [shortid.generate()]: {
-
-    }
-  }
+  notes: {}
 };
 
 export default function reducer(state = initialState, action) {

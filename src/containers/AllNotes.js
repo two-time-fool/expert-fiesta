@@ -3,11 +3,12 @@ import Notes from '../components/Notes';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getNotes } from '../selectors/notes';
+import '../components/app/App.css';
 
 function AllNotes({ notes }) {
   return (
     <>
-      <Notes notes={notes} />
+      {notes && <Notes notes={notes} />}
     </>
   );
 }

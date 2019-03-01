@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './app/App.css';
 
 function AddNoteForm({ title, body, onChange, onSubmit }) {
   return (

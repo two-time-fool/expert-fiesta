@@ -4,6 +4,7 @@ import AddNoteForm from '../components/AddNoteForm';
 import PropTypes from 'prop-types';
 import { addNote, updateNoteTitle, updateNoteBody } from '../actions/notes';
 import { getNoteTitle, getNoteBody } from '../selectors/createNotes';
+import '../components/app/App.css';
 
 function AddNote({ title, body, onChange, onSubmit }) {
   return (
