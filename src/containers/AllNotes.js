@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import Notes from '../components/Notes';
-// import { connect } from 'tls';
+import { connect } from 'redux';
 
 class AllNotes extends PureComponent {
   render() {
@@ -11,8 +11,6 @@ class AllNotes extends PureComponent {
     );
   }
 }
-
-export default AllNotes;
 
 export default connect(
   mapStateToProps,
