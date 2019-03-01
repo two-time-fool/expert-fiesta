@@ -1,5 +1,4 @@
 export const getNoteTitle = (state) => {
-  console.log(state);
   return state.createNotes.title;
 };
 
