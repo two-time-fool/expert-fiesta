@@ -14,7 +14,7 @@ class AllNotes extends PureComponent {
 
 export default AllNotes;
 
-// export default connect(
-//   mapStateToProps,
-//   mapDispatchToProps
-// )(AllNotes);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(AllNotes);

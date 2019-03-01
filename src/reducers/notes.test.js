@@ -16,13 +16,11 @@ describe('notes reducer', () => {
       }
     });
 
-    expect(addedNote).toEqual({
-      notes: {
-        [expect.any(String)]: {
-          title: 'yolo420',
-          body: 'when'
-        }
-      }
-    });
+    expect(Object.values(addedNote.notes)).toEqual(
+      [{
+        title: 'yolo420',
+        body: 'when'
+      }]
+    );
   });
 });
