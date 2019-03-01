@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 
 function Notes({ notes }) {
   const notesList = Object.keys(notes.notes).map(id => {
-    const title = Object.values(notes.notes[id]);
-    console.log(title);
+    const title = Object.values(notes.notes[id])[0];
+    const body = Object.values(notes.notes[id])[1];
     return (
-      <li key={id}>{title}</li>
+      <li key={id}>{title}: {body}</li>
     );
   });
   return (
