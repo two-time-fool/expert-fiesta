@@ -31,4 +31,13 @@ describe('notes action creators', () => {
       payload: 'yolo'
     });
   });
+
+  it('can update a note body', () => {
+    const action = updateNoteBody('heeeey');
+
+    expect(action).toEqual({
+      type: UPDATE_NOTE_BODY,
+      payload: 'heeeey'
+    });
+  });
 });
