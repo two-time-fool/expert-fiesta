@@ -1,4 +1,4 @@
-import { getNotes, getNoteTitle } from './notes';
+import { getNotes, getNoteTitle, getNoteBody } from './notes';
 
 describe('notes selector', () => {
   it('gets a list of notes', () => {
@@ -27,5 +27,17 @@ describe('notes selector', () => {
 
     const selectedTitle = getNoteTitle(state, 1234);
     expect(selectedTitle).toEqual('yolo420');
+  });
+
+  it('gets a note body', () => {
+    const state = {
+      1234: {
+        title: 'yolo420',
+        body: 'expert-fiesta'
+      }
+    };
+
+    const selectedBody = getNoteBody(state, 1234);
+    expect(selectedBody).toEqual('expert-fiesta');
   });
 });
