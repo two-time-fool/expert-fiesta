@@ -3,7 +3,7 @@ import React from 'react';
 import AddNoteForm from '../components/AddNoteForm';
 import PropTypes from 'prop-types';
 import { addNote, updateNoteTitle, updateNoteBody } from '../actions/notes';
-import { getNoteTitle, getNoteBody } from '../selectors/notes';
+import { getNoteTitle, getNoteBody } from '../selectors/createNotes';
 
 function AddNote({ title, body, onChange, onSubmit }) {
   return (
@@ -16,9 +16,9 @@ function AddNote({ title, body, onChange, onSubmit }) {
   );
 }
 
-const mapStateToProps = (state, props) => ({
-  title: getNoteTitle(state, props.notes.id),
-  body: getNoteBody(state, props.notes.id)
+const mapStateToProps = state => ({
+  title: getNoteTitle(state),
+  body: getNoteBody(state)
 });
 
 const mapDispatchToProps = dispatch => ({
