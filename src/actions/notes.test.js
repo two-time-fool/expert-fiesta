@@ -1,4 +1,11 @@
-import { addNote, ADD_NOTE } from './notes';
+import { 
+  addNote, 
+  ADD_NOTE,
+  updateNoteBody,
+  UPDATE_NOTE_BODY,
+  updateNoteTitle,
+  UPDATE_NOTE_TITLE
+} from './notes';
 
 describe('notes action creators', () => {
   it('can add a note', () => {
@@ -13,6 +20,15 @@ describe('notes action creators', () => {
         title: 'fiesta-fools',
         body: 'want margaritas'
       }
+    });
+  });
+
+  it('can update a note title', () => {
+    const action = updateNoteTitle('yolo');
+
+    expect(action).toEqual({
+      type: UPDATE_NOTE_TITLE,
+      payload: 'yolo'
     });
   });
 });
