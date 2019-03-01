@@ -6,6 +6,7 @@ function AddNoteForm({ title, body, onChange, onSubmit }) {
     <form onSubmit={onSubmit}>
       <input type="text" name="title" value={title} onChange={onChange} />
       <textarea name="body" value={body} onChange={onChange}></textarea>
+      <button>Submit</button>
     </form>
   );
 }
