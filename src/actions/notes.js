@@ -15,4 +15,3 @@ export const updateNoteBody = body => ({
   type: UPDATE_NOTE_BODY,
   payload: body
 });
-

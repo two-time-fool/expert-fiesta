@@ -1,4 +1,4 @@
-import reducer from './notes';
+import reducer from './createNotes';
 import { ADD_NOTE, UPDATE_NOTE_TITLE, UPDATE_NOTE_BODY } from '../actions/notes';
 
 describe('notes reducer', () => {
