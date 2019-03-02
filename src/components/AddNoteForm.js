@@ -5,8 +5,8 @@ import './app/App.css';
 function AddNoteForm({ title, body, onChange, onSubmit }) {
   return (
     <form onSubmit={onSubmit}>
-      <input type="text" name="title" value={title} onChange={onChange} />
-      <textarea name="body" value={body} onChange={onChange}></textarea>
+      <input type="text" name="title" value={title} onChange={onChange} placeholder='Title' />
+      <textarea name="body" value={body} onChange={onChange} placeholder='Note'></textarea>
       <button>SUBMIT</button>
     </form>
   );

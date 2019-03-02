@@ -5,6 +5,7 @@
     font-size: 1.5em;
     text-shadow: 2px 2px black;
     padding: 10px;
+    margin-left: 20px;
   }
   img {
     z-index: -1;
@@ -30,11 +31,11 @@
     }
     input {
       margin-bottom: 10px;
-      padding: 5px;
+      padding: 10px;
     }
     textarea {
       margin-bottom: 10px;
-      padding: 5px;
+      padding: 10px;
     }
   }
   h2 {
