@@ -8,9 +8,12 @@
   }
   img {
     z-index: -1;
-    position: absolute;
+    position: fixed;
     top: 0;
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    object-position: top;
     opacity: 0.75;
   }
   form {
@@ -34,12 +37,23 @@
       padding: 5px;
     }
   }
+  h2 {
+    text-align: center;
+  }
+  ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
   li {
     list-style: none;
     background: rgb(222, 184, 135, 0.472);
     border: 1px solid black;
     padding: 10px;
-    width: fit-content;
+    width: 40%;
+    margin: 15px;
+    font-size: 1.05em;
   }
   li:hover {
     box-shadow: 2px 2px black;
